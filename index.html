@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GuessMe</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <header class="box">
+    <img src="img/layout/images.png" />
+  </header>
+
+  <main>
+    <div class="game-over" style="display: none">
+      <h1>Yes, I knew it!</h1>
+      <img class="victory" src="img/giphy.webp" />
+      <div>
+        <button class="Play" onclick="onRestartGame()">Play again</button></div>
+    </div>
+    <section class="game-start">
+      <h2>Think of Someone...</h2>
+      <button onclick="onStartGuessing()" class="btn btn-lg btn-success">I'm Ready!</button>
+    </section>
+    <section class="quest" style="display: none">
+      <h2></h2>
+      <button onclick="onUserResponse('yes')" class="btn btn-info">Yes</button>
+      <button onclick="onUserResponse('no')" class="btn btn-danger">No</button>
+    </section>
+    <section class="new-quest" style="display: none">
+      <h2>OK, I gave up...</h2>
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="newGuess" class=" control-label">You thought of: </label>
+          <div>
+            <input name="newGuess" type="txt" class="form-control" id="newGuess" placeholder="Your Guess" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="newQuest" class=" control-label">Question to differentiate</label>
+          <div>
+            <input name="newQuest" type="txt" class="form-control" id="newQuest"
+              placeholder="The answer is YES for yours" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 ">
+            <button type="submit" onclick="onAddGuess();return false;" class="submit ">
+              Make me Smarter!
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    cofferight &copy; 2019
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="js/util-service.js"></script>
+  <script src="js/quest-service.js"></script>
+  <script src="js/quest-controller.js"></script>
+
+</body>
+
+</html>

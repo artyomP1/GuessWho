@@ -1,0 +1,44 @@
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: lightgray;
+}
+
+header {
+  background-color: #73AEDB;
+  text-align: center;
+  color:#fcf064;
+  font-size: 3em;
+}
+
+footer {
+  background-color:  black;
+  text-align: center;
+  color:lightblue;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.submit{
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+.victory{
+  width: 120px;
+  height:160px;
+}
+
+.Play{
+  background-color:rgb(97, 97, 202);
+  margin-top: 1px;
+}
