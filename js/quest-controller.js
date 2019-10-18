@@ -32,7 +32,7 @@ function onUserResponse(res) {
             // TODO: improve UX
         } else {
             alert('I dont know...teach me!')
-            // TODO: hide and show new-quest section
+                // TODO: hide and show new-quest section
             $('.quest').css('display', 'none');
             $('.new-quest').css('display', 'block');
         }
@@ -53,6 +53,8 @@ function onAddGuess() {
     var lastRes = getLastRes();
     // TODO: Call the service addGuess
     addGuess(newQuestTxt, newGuessTxt, lastRes);
+    var newQuestTxt = $('#newQuest').val('');
+    var newGuessTxt = $('#newGuess').val('');
     onRestartGame();
 }
 
@@ -64,4 +66,3 @@ function onRestartGame() {
     gLastRes = null;
     restartGame();
 }
-

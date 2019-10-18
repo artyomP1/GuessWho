@@ -35,6 +35,7 @@ function moveToNextQuest(res) {
     gCurrQuest = gPrevQuest[res];
 
 }
+
 function getCurrQuest() {
     return gCurrQuest;
 }
@@ -57,7 +58,7 @@ function addGuess(newQuestTxt, newGuessTxt, lastRes) {
     gPrevQuest[lastRes] = createQuest(newQuestTxt);
     gPrevQuest[lastRes].no = gCurrQuest;
     gPrevQuest[lastRes].yes = createQuest(newGuessTxt);
-    saveGussToStorage(QUSEST, gQuestsTree);
+    saveGussToStorage(QUSEST_kEY, gQuestsTree);
 }
 
 function restartGame() {
@@ -68,6 +69,7 @@ function restartGame() {
 function saveGussToStorage(QUSEST_kEY, gQuestsTree) {
     saveToStorage(QUSEST_kEY, gQuestsTree)
 }
+
 function loadQuests(QUSEST_kEY) {
-    loadFromStorage(QUSEST_kEY);
+    return loadFromStorage(QUSEST_kEY);
 }
